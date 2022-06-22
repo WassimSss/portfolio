@@ -8,6 +8,7 @@ require_once 'mail.php'; ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/windows-logo.png">
     <title>Portfolio - Wassim Salmi</title>
 </head>
 
@@ -75,10 +76,17 @@ require_once 'mail.php'; ?>
             <div id="content_popup_trash">
                 <a href="http://muscuprogress.alwaysdata.net/" target="_blank">
                     <div class="app">
-                        <img class="app_image" src="./images/parchemin-ancien.png" alt="Ancien portfolio">
-                        <p class="app_title">Ancien portfolio</p>
+                        <img class="app_image" src="./images/pomme.png" alt="pomme">
+                        <p class="app_title">Pomme entamée</p>
                     </div>
                 </a>
+                <a href="https://www.flaticon.com/fr/icones-gratuites/lait" target="_blank">
+                    <div class="app">
+                        <img class="app_image" src="./images/bouteille-de-lait.png" alt="lait">
+                        <p class="app_title">Lait périmé</p>
+                    </div>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -365,9 +373,9 @@ require_once 'mail.php'; ?>
                         <ion-icon name="tablet-landscape-outline"></ion-icon>
                     </p>
                     <button id="close_screen" class="close" onclick="closePopup(this)">
-                    <p>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </p>
+                        <p>
+                            <ion-icon name="close-outline"></ion-icon>
+                        </p>
                     </button>
                 </div>
             </div>
