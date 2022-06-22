@@ -1,0 +1,372 @@
+$close: #ff0000;
+$numberPerRow: 5;
+$backgroundColor: #d12c2c;
+
+body {
+    background-color: #d12c2c;
+    font-family: 'Calibri';
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    height: 100%;
+}
+
+.desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(100vh - $numberPerRow * 10px);
+}
+
+.app {
+    border: 1px solid transparent;
+    margin: 5px;
+    width: 100px;
+    height: calc((100vh / $numberPerRow) - (50px / $numberPerRow) - 12px); // 50px / $nuberPerRow because the footer and - 12px because margin 5px * 2 and border 1px * 2
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+    }
+
+    .app_image {
+        height: 40px;
+        margin: 10px;
+    }
+
+    .app_title {
+        color: white;
+        margin: 0 10px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+    nav {
+        background-color: #333;
+        opacity: 95%;
+        height: 50px;
+        width: 100vw;
+
+        .footer_app {
+            display: inline-block;
+            height: 100%;
+
+            img {
+                height: 25px;
+                margin: 12.5px;
+            }
+        }
+    }
+}
+
+.active {
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        background-color: rgb(227, 227, 227);
+        width: 70vw;
+        max-width: 500px;
+        height: 60vh;
+        max-height: 400px;
+        min-height: 200px;
+        overflow-y: scroll;
+
+        .header_popup {
+            position: relative;
+            background-color: #333;
+            color: white;
+            height: 30px;
+
+            div {
+                height: 30px;
+                position: absolute;
+                top: 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .left {
+                left: 0;
+
+                p {
+                    margin: 0 0 0 10px;
+                }
+            }
+
+            .right {
+                right: 0;
+                font-size: 20px;
+
+                p {
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: gray;
+                    }
+                }
+
+                .close {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    height: 30px;
+                    width: 30px;
+                    font-size: 20px;
+                    background-color: transparent;
+                    color: white;
+
+                    p {
+
+                        &:hover {
+                            background-color: $close;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        #content_popup_trash {
+            display: flex;
+
+            .app {
+                height: 120px;
+                width: 120px;
+                flex-direction: row;
+                margin: 0;
+                text-align: center;
+            }
+
+            p {
+                color: black;
+                text-align: center;
+                width: 120px;
+
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        #content_popup_projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .app {
+                height: 120px;
+                width: 120px;
+                flex-direction: row;
+                margin: 0;
+                text-align: center;
+            }
+
+            p {
+                color: black;
+                text-align: center;
+                width: 120px;
+
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        #content_popup_skills {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .img_and_text {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .descritpion {
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .app {
+                height: 100px;
+                width: 100px;
+                margin: 0;
+                text-align: center;
+
+                p {
+                    color: black;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        #content_popup_me {
+
+            .img_and_text {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .descritpion {
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .documents {
+                display: flex;
+
+                .app {
+                    height: 120px;
+                    width: 120px;
+                    margin: 0;
+                    text-align: center;
+
+                    p {
+                        color: black;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        #content_popup_linkedin {
+            .app {
+                height: 120px;
+                width: 120px;
+                margin: 0;
+                text-align: center;
+
+                p {
+                    color: black;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        #content_popup_github {
+            .app {
+                height: 120px;
+                width: 120px;
+                margin: 0;
+                text-align: center;
+
+                p {
+                    color: black;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        #content_popup_email {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    margin: 5px;
+                }
+
+                textarea {
+                    margin: 5px;
+                    resize: none;
+                }
+            }
+        }
+
+        #content_popup_screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h3 {
+                text-align: center;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.right_click {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 175px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+    .btn {
+        font-size: 14px;
+        width: 100%;
+        height: 20px;
+        border: 1px solid black;
+    }
+}

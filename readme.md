@@ -1,0 +1,1 @@
+J'ai essayer de respecter les valeurs en thermes de hauteur et largeur pour avoir un resulat le plus réel possible, en prenant les mesures sur mon ordinateur

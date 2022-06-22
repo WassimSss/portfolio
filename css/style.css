@@ -1,0 +1,299 @@
+body {
+  background-color: #d12c2c;
+  font-family: "Calibri";
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 100%;
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: calc(100vh - 50px);
+}
+
+.app {
+  border: 1px solid transparent;
+  margin: 5px;
+  width: 100px;
+  height: calc(20vh - 10px - 12px);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.app:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.app .app_image {
+  height: 40px;
+  margin: 10px;
+}
+.app .app_title {
+  color: white;
+  margin: 0 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+footer nav {
+  background-color: #333;
+  opacity: 95%;
+  height: 50px;
+  width: 100vw;
+}
+footer nav .footer_app {
+  display: inline-block;
+  height: 100%;
+}
+footer nav .footer_app img {
+  height: 25px;
+  margin: 12.5px;
+}
+
+.active .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background-color: #e3e3e3;
+  width: 70vw;
+  max-width: 500px;
+  height: 60vh;
+  max-height: 400px;
+  min-height: 200px;
+  overflow-y: scroll;
+}
+.active .popup .header_popup {
+  position: relative;
+  background-color: #333;
+  color: white;
+  height: 30px;
+}
+.active .popup .header_popup div {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.active .popup .header_popup .left {
+  left: 0;
+}
+.active .popup .header_popup .left p {
+  margin: 0 0 0 10px;
+}
+.active .popup .header_popup .right {
+  right: 0;
+  font-size: 20px;
+}
+.active .popup .header_popup .right p {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active .popup .header_popup .right p:hover {
+  background-color: gray;
+}
+.active .popup .header_popup .right .close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+}
+.active .popup .header_popup .right .close p:hover {
+  background-color: #ff0000;
+}
+.active .popup #content_popup_trash {
+  display: flex;
+}
+.active .popup #content_popup_trash .app {
+  height: 120px;
+  width: 120px;
+  flex-direction: row;
+  margin: 0;
+  text-align: center;
+}
+.active .popup #content_popup_trash p {
+  color: black;
+  text-align: center;
+  width: 120px;
+}
+.active .popup #content_popup_trash a {
+  text-decoration: none;
+}
+.active .popup #content_popup_projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.active .popup #content_popup_projects .app {
+  height: 120px;
+  width: 120px;
+  flex-direction: row;
+  margin: 0;
+  text-align: center;
+}
+.active .popup #content_popup_projects p {
+  color: black;
+  text-align: center;
+  width: 120px;
+}
+.active .popup #content_popup_projects a {
+  text-decoration: none;
+}
+.active .popup #content_popup_skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.active .popup #content_popup_skills .img_and_text {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.active .popup #content_popup_skills .descritpion p {
+  text-align: center;
+}
+.active .popup #content_popup_skills .app {
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  text-align: center;
+}
+.active .popup #content_popup_skills .app p {
+  color: black;
+}
+.active .popup #content_popup_skills a {
+  text-decoration: none;
+}
+.active .popup #content_popup_me .img_and_text {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.active .popup #content_popup_me .descritpion p {
+  text-align: center;
+}
+.active .popup #content_popup_me .documents {
+  display: flex;
+}
+.active .popup #content_popup_me .documents .app {
+  height: 120px;
+  width: 120px;
+  margin: 0;
+  text-align: center;
+}
+.active .popup #content_popup_me .documents .app p {
+  color: black;
+}
+.active .popup #content_popup_me .documents a {
+  text-decoration: none;
+}
+.active .popup #content_popup_linkedin .app {
+  height: 120px;
+  width: 120px;
+  margin: 0;
+  text-align: center;
+}
+.active .popup #content_popup_linkedin .app p {
+  color: black;
+}
+.active .popup #content_popup_linkedin a {
+  text-decoration: none;
+}
+.active .popup #content_popup_github .app {
+  height: 120px;
+  width: 120px;
+  margin: 0;
+  text-align: center;
+}
+.active .popup #content_popup_github .app p {
+  color: black;
+}
+.active .popup #content_popup_github a {
+  text-decoration: none;
+}
+.active .popup #content_popup_email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.active .popup #content_popup_email form {
+  display: flex;
+  flex-direction: column;
+}
+.active .popup #content_popup_email form input {
+  margin: 5px;
+}
+.active .popup #content_popup_email form textarea {
+  margin: 5px;
+  resize: none;
+}
+.active .popup #content_popup_screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.active .popup #content_popup_screen h3 {
+  text-align: center;
+}
+.active .popup #content_popup_screen div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 175px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.right_click .btn {
+  font-size: 14px;
+  width: 100%;
+  height: 20px;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
